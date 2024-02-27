@@ -1,0 +1,62 @@
+// Headings
+@mixin heading_1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 5.19rem;
+}
+
+@mixin heading_2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.63rem;
+}
+
+@mixin heading_3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.63rem;
+}
+
+@mixin heading_4 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 2.75rem;
+}
+
+@mixin heading_5 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.63rem;
+}
+
+@mixin heading_6 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+}
+
+@mixin border-gradient {
+  border: .06rem solid;
+  border-image: $linearBackground;
+  border-image-slice: 1;
+}
+
+
+// Media
+@mixin laptop() {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

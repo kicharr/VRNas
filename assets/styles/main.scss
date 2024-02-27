@@ -1,0 +1,201 @@
+@import "reset.css";
+@import "vars";
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'ChakraPetch', serif;
+}
+
+body {
+  font-size: 1rem;
+  color: #FFFFFF;
+  background-color: $black_100;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 76.25rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1 {
+  @include heading_1;
+}
+
+h2 {
+  @include heading_2;
+}
+
+h3 {
+  @include heading_3;
+}
+
+h4 {
+  @include heading_4;
+}
+
+h5 {
+  @include heading_5;
+}
+
+h6 {
+  @include heading_6;
+}
+
+.btn {
+  color: inherit;
+  font-family: ChakraPetch, serif;
+  font-weight: 300;
+  font-size: inherit;
+  line-height: 1.75rem;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &--linear {
+    padding: .75rem 1.5rem;
+    @include border-gradient;
+  }
+
+  &--input {
+    position: absolute;
+    top: calc(50% - 1.4rem);
+    right: .4rem;
+
+    padding: 1rem;
+    background: rgba(255, 255, 255, .21);
+  }
+
+  &--start {
+    background: $linearBackground;
+    padding: 1.13rem 2.38rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 0.88rem;
+    letter-spacing: 0.09rem;
+
+    text-transform: uppercase;
+  }
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  padding: 0.875rem 0;
+
+  &--subscribe {
+    border-radius: 0.13rem;
+
+    background: rgba(255, 255, 255, 0.07);
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #FFFFFF;
+
+    padding-left: 2.875rem;
+    padding-right: 8.5rem;
+
+    @include tablet {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 0;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: #FFFFFF;
+  }
+
+  &:-moz-placeholder {
+    color: #FFFFFF;
+  }
+
+  &::-moz-placeholder {
+    color: #FFFFFF;
+  }
+
+  &:-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+}
+
+a {
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.section-heading {
+  margin-bottom: 2.5rem;
+
+  @include laptop {
+    margin-bottom: 2.938rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+
+    @include laptop {
+      font-size: 2rem;
+      line-height: 2.63rem;
+    }
+  }
+
+  &__text {
+    color: $grey_2;
+
+    &--gradient {
+      background: $linearBackground;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      margin-bottom: .75rem;
+    }
+  }
+}
